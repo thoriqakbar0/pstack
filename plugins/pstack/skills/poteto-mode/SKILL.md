@@ -140,6 +140,7 @@ A large or cross-cutting effort (a migration across many call sites, an ambitiou
 - **Feature.** New or changed behavior, built from a named data shape.
 - **Refactoring.** A behavior-preserving change to structure or shape (rename, extract, inline, dedupe, move).
 - **Prototype.** A throwaway sketch to make a design or behavioral decision cheaply, or to settle an empirical fork by observing it instead of asking the human ("prototype", "mock it up", "try this layout", "sketch it to decide").
+- **React.** Hardening a React component a change adds or edits against server rendering, hydration, StrictMode, portals, pop-out windows, and `<Activity>`. Run it beside Feature, Bug fix, or Refactoring.
 - **Visual parity.** Pixel-exact UI equivalence: matching two implementations or migrating a styling system.
 - **Authoring or modifying a skill.** Writing or editing a SKILL.md. File: `playbooks/authoring-a-skill.md`.
 - **Eval.** Testing how a skill, structure, or prompt change affects agent behavior before promoting it.

@@ -2,6 +2,10 @@
 
 This file is the release changelog, with one `## <version> - <title>` entry per release, newest first. The Cursor-to-Claude rewrite rules live in [`tools/substitutions.json`](tools/substitutions.json), and the [sync boundary](CONTRIBUTING.md#the-sync-boundary) in `CONTRIBUTING.md` defines how a change to upstream's skill content is declared.
 
+## 0.9.95 - adds /rev-mode, RevEngine's review pipeline as a pstack mode
+
+Adds the `rev-mode` skill, a port of [laude-institute/rev-engine](https://github.com/laude-institute/rev-engine) at b92df56 (Apache-2.0) from a GitHub Action to subagents. Full and focus review seats read the change without running it, a follow-up seat looks for what they missed, a verifier rejects findings the code does not support, and `scripts/reduce.mjs` merges repeats, applies verdicts, ranks, and opens the review with merge advice. Four model roles (`rev reviewers`, `rev focus seats`, `rev follow-up`, `rev verifier`) join `models.json`. poteto-mode routes code review to the skill, and poteto-help lists it. `LICENSE-rev-engine` ships with the plugin and the skills-only install.
+
 ## 0.9.94 - sync to upstream f9be7aa (v0.15.27): adds /create-formal-verification-skill
 
 The upstream pin moves from `99743e9` to `f9be7aa`, upstream v0.15.27 plus one commit. `/create-formal-verification-skill` generates a project-local skill that formally verifies the code where a bug costs most and tests reach least. `/setup-pstack` offers it once as step 10, after the verification-skill offer, and `/poteto-help` mentions it for races and invariants. `/ketchup` lists every waiting item and never cuts one to meet a word count, `/sharpen` drops its rewritten-prompt ban, and `typescript-best-practices` picks up upstream's pattern edits. The package now carries 40 public skills and 24 principles.

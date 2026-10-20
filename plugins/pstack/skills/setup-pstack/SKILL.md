@@ -75,6 +75,10 @@ arena cross-judge pool: opus, fable, sonnet, haiku
 swarm workers: opus
 architect runners: opus, fable, sonnet, haiku
 interrogate reviewers: opus, fable, sonnet, haiku
+rev reviewers: opus
+rev focus seats: sonnet
+rev follow-up: fable
+rev verifier: opus
 
 default effort: session
 session hook: on

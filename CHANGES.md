@@ -2,6 +2,10 @@
 
 This file is the release changelog, with one `## <version> - <title>` entry per release, newest first. The Cursor-to-Claude rewrite rules live in [`tools/substitutions.json`](tools/substitutions.json), and the [sync boundary](CONTRIBUTING.md#the-sync-boundary) in `CONTRIBUTING.md` defines how a change to upstream's skill content is declared.
 
+## 0.9.94 - sync to upstream f9be7aa (v0.15.27): adds /create-formal-verification-skill
+
+The upstream pin moves from `99743e9` to `f9be7aa`, upstream v0.15.27 plus one commit. `/create-formal-verification-skill` generates a project-local skill that formally verifies the code where a bug costs most and tests reach least. `/setup-pstack` offers it once as step 10, after the verification-skill offer, and `/poteto-help` mentions it for races and invariants. `/ketchup` lists every waiting item and never cuts one to meet a word count, `/sharpen` drops its rewritten-prompt ban, and `typescript-best-practices` picks up upstream's pattern edits. The package now carries 40 public skills and 24 principles.
+
 ## 0.9.93 - orch reads gh head repositories on gh before 2.80
 
 `orch frontier set` no longer rejects every gh pull request row as invalid on gh before 2.80.0, whose `headRepository` carries only `id` and `name`. The gh query now asks for `headRepositoryOwner` too and builds the head repository from the owner's login and the repository name, as `watch-pr` already does, so it reads the same on every gh version. A malformed owner still fails the row, and a deleted fork still drops out of the chain. @newinh found and fixed it in [#288](https://github.com/michael-denyer/pstack-claude/pull/288).

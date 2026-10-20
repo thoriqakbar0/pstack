@@ -1,4 +1,9 @@
-### React
+---
+name: react
+description: "Harden a React component a change adds or edits against server rendering, hydration, StrictMode, portals, pop-out windows, and <Activity>. Use for /react, 'harden this component', hydration warnings, or effect cleanup leaks, and beside the Feature, Bug fix, or Refactoring playbook whenever the change touches a React component."
+---
+
+# React
 
 **You own the component's behavior off the happy path.** Run this beside Feature, Bug fix, or Refactoring when the change adds or edits a React component. It adds the hardening pass. The other playbook still owns design and delivery.
 
@@ -13,7 +18,7 @@
    - **Update priority matches intent.** Input the user is typing or pointing at stays urgent. The expensive rerender it triggers goes through `startTransition` or `useDeferredValue`. Leave cheap updates alone.
    - **Memoization is a hint.** `useMemo`, `useCallback`, and `memo` may recompute. No correctness depends on a memoized value's identity.
 3. Exercise each environment from step 1 on the real app through the matching driver skill, or a scratch page when none exists: server render and hydrate with the console open for hydration warnings, StrictMode, two instances, a portal into a second window, `<Activity>` hidden then visible, unmount then remount. After unmount, confirm no listener, timer, or style survives. Apply the **prove-it-works** principle skill. A case you could not run stays listed as unverified.
-4. A performance claim needs a browser trace before and after: layout, style recalculation, long tasks, paint. React render counts alone do not show the dominant cost. Route sustained perf work to Perf issue (`playbooks/perf-issue.md`).
-5. Run **Opening a PR**.
+4. A performance claim needs a browser trace before and after: layout, style recalculation, long tasks, paint. React render counts alone do not show the dominant cost. Route sustained perf work to the Perf issue playbook (`../poteto-mode/playbooks/perf-issue.md`).
+5. Run **Opening a PR** (`../poteto-mode/playbooks/opening-a-pr.md`) unless the playbook this runs beside already does.
 
 **Reply:** the environments covered, the invariant violations found and fixed, each exercised case with its result, and the cases left unverified.

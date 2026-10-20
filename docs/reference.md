@@ -4,7 +4,7 @@ Start with the [README](../README.md) for installation and your first task.
 
 ## Slash commands
 
-The package includes 64 skill directories: 40 public skills and 24 `principle-*` references. Claude Code uses `/pstack:<name>`, and Pi uses `/skill:<name>`. In Codex, request a skill by name or install the [optional shortcuts](#codex) for the `/name` form below.
+The package includes 65 skill directories: 41 public skills and 24 `principle-*` references. Claude Code uses `/pstack:<name>`, and Pi uses `/skill:<name>`. In Codex, request a skill by name or install the [optional shortcuts](#codex) for the `/name` form below.
 
 Find each skill's instructions in the [skills tree](../plugins/pstack/skills/).
 
@@ -20,6 +20,7 @@ Find each skill's instructions in the [skills tree](../plugins/pstack/skills/).
 | `/reflect` | capture a long task's lessons as a skill edit |
 | `/correct` | find the mistakes agents keep repeating in a repo and make each one impossible, enforced at the highest level that works |
 | `/tdd` | fix a bug by writing the failing test first, then the fix |
+| `/react` | harden a React component against server rendering, hydration, StrictMode, portals, and `<Activity>` |
 | `/benchmark-checklist` | vet a measured speedup or regression (limiter, tuning, errors, repeat runs, end-to-end relevance) before you report or act on it |
 | `/typescript-best-practices` | ground type-system discipline in TypeScript syntax |
 | `/teach` | explain a subsystem plainly by composing how + why |

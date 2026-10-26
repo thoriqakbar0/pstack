@@ -2,6 +2,10 @@
 
 This file is the release changelog, with one `## <version> - <title>` entry per release, newest first. The Cursor-to-Claude rewrite rules live in [`tools/substitutions.json`](tools/substitutions.json), and the [sync boundary](CONTRIBUTING.md#the-sync-boundary) in `CONTRIBUTING.md` defines how a change to upstream's skill content is declared.
 
+## 0.9.96 - adds /ephemeral-bend for throwaway Bend runs
+
+Adds the `ephemeral-bend` skill. It reads `bend guide`, writes one `.bend` file in a temp dir, runs it with `bend` (or `--check-only` for a type check), reports the output, and deletes the dir, failures included. poteto-mode routes Bend work to it with one Non-negotiables trigger, and poteto-help lists it. The package now carries 43 public skills and 24 principles.
+
 ## 0.9.95 - adds /rev-mode, RevEngine's review pipeline as a pstack mode
 
 Adds the `rev-mode` skill, a port of [laude-institute/rev-engine](https://github.com/laude-institute/rev-engine) at b92df56 (Apache-2.0) from a GitHub Action to subagents. Full and focus review seats read the change without running it, a follow-up seat looks for what they missed, a verifier rejects findings the code does not support, and `scripts/reduce.mjs` merges repeats, applies verdicts, ranks, and opens the review with merge advice. Four model roles (`rev reviewers`, `rev focus seats`, `rev follow-up`, `rev verifier`) join `models.json`. poteto-mode routes code review to the skill, and poteto-help lists it. `LICENSE-rev-engine` ships with the plugin and the skills-only install.

@@ -70,6 +70,7 @@ The default answer is `/poteto-mode`, which runs most of the others when its ste
 | Fix a bug test-first when a cheap local test exists | [`/tdd`](../tdd/SKILL.md) |
 | Harden a React component against server rendering, hydration, StrictMode, portals, and `<Activity>` | [`/react`](../react/SKILL.md) |
 | Review a PR or diff like a maintainer, with verified findings and merge advice | [`/rev-mode`](../rev-mode/SKILL.md) |
+| Try or compute something in Bend in a throwaway file that gets deleted after it runs | [`/ephemeral-bend`](../ephemeral-bend/SKILL.md) |
 | Apply TypeScript rules to `.ts` or `.tsx` work | [`/typescript-best-practices`](../typescript-best-practices/SKILL.md) |
 | Strip comments before review, using a reviewer that didn't write them | [`/no-comments`](../no-comments/SKILL.md) |
 | Clean AI tells out of prose | [`/unslop`](../unslop/SKILL.md) |

@@ -24,6 +24,8 @@ This plugin is a port of upstream MIT-licensed work. The port's modifications an
 | `plugins/pstack/skills/ketchup/` (v0.15.21 addition) | [cursor/plugins/pstack @ 997ffc7](https://github.com/cursor/plugins/tree/997ffc7/pstack) | (c) 2026 Lauren Tan | MIT | [LICENSE](LICENSE) |
 | `plugins/pstack/skills/in-your-own-words/`, `plugins/pstack/skills/sharpen/` (v0.15.22 and v0.15.24 additions) | [cursor/plugins/pstack @ 99743e9](https://github.com/cursor/plugins/tree/99743e9/pstack) | (c) 2026 Lauren Tan | MIT | [LICENSE](LICENSE) |
 | `plugins/pstack/skills/rev-mode/` (0.9.95 addition; reviewer and verifier briefs and the merge, verdict, rank, and merge-advice rules adapted to Claude Code subagents and a Node script) | [laude-institute/rev-engine @ b92df56](https://github.com/laude-institute/rev-engine/tree/b92df56) | (c) 2026 Laude Institute | Apache-2.0 | [LICENSE-rev-engine](LICENSE-rev-engine) |
+| `plugins/pstack/skills/create-formal-verification-skill/`, `plugins/pstack/skills/maintain-formal-verification-skill/` (v0.15.26 and post-v0.15.27 additions) | [cursor/plugins/pstack @ 7b353f7](https://github.com/cursor/plugins/tree/7b353f7/pstack) | (c) 2026 Lauren Tan | MIT | [LICENSE](LICENSE) |
+| `plugins/pstack/skills/statechart/`, `plugins/pstack/skills/ketchup-video/` (v0.15.31 and v0.15.32 additions) | [cursor/plugins/pstack @ e73df47](https://github.com/cursor/plugins/tree/e73df47/pstack) | (c) 2026 Lauren Tan | MIT | [LICENSE](LICENSE) |
 
 ## What changed in the port
 

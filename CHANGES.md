@@ -2,6 +2,12 @@
 
 This file is the release changelog, with one `## <version> - <title>` entry per release, newest first. The Cursor-to-Claude rewrite rules live in [`tools/substitutions.json`](tools/substitutions.json), and the [sync boundary](CONTRIBUTING.md#the-sync-boundary) in `CONTRIBUTING.md` defines how a change to upstream's skill content is declared.
 
+## fork - sync to upstream c742dd6 (v0.15.36): Orchestrate runs on the coordinator's own tools
+
+The upstream pin moves from `ab1f702` to `c742dd6`, upstream v0.15.36, 1 pstack commit. The Orchestrate playbook drops the `orch` command-line tool. The coordinator spawns workers with `Agent`, keeps the program's state in `notes.md` under `~/.claude/orchestrate/<project-slug>/`, checks each PR's live state with `gh`, and gives every PR one owner and a verifier on another model family. The `orch` scripts (`orch.ts`, `store.ts`, `orch.test.ts`) are gone, including the port's lock and table guards in `store.ts`, which upstream's deletion leaves port-only and unused. The scripts' `test` entry, the CI test step, CONTRIBUTING, and the Bun and `gh` rows in `docs/reference.md` no longer name `orch`.
+
+Three new substitution rules port upstream's new sentences: workers run as background subagents in their own worktrees instead of on cloud VMs, the program's store replaces Cursor's Project tracker and Project store, and a driver-skill check replaces a control-skill check. Four rules for the old playbook's text are gone, because no upstream file at the new pin matches them. The fork registry drops the `orch.test.ts` and `store.ts` entries, and `watch-pr/fresh-install.test.ts` no longer checks an `orch` first run.
+
 ## fork - adds /ephemeral-bend for throwaway Bend runs
 
 Adds the `ephemeral-bend` skill. It reads `bend guide`, writes one `.bend` file in a temp dir, runs it with `bend` (or `--check-only` for a type check), reports the output, and deletes the dir, failures included. poteto-mode routes Bend work to it with one Non-negotiables trigger, and poteto-help lists it. The package now carries 43 public skills and 24 principles.
